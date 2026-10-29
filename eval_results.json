@@ -1,0 +1,433 @@
+{
+  "description": "A: raw baseline input. B: synonym normalization before the same agent. Scoring uses intent labels inferred from replies.",
+  "A_baseline": {
+    "total": 21,
+    "passed": 12,
+    "failed": 9,
+    "accuracy_percent": 57.14,
+    "errors": [
+      {
+        "task_id": 3,
+        "input": "I need a license",
+        "expected": "permit",
+        "predicted": "greeting",
+        "passed": false,
+        "reply": "Welcome to Rafeeq. How can I help with a municipal permit?"
+      },
+      {
+        "task_id": 4,
+        "input": "How do I get building authorization?",
+        "expected": "permit",
+        "predicted": "greeting",
+        "passed": false,
+        "reply": "Welcome to Rafeeq. How can I help with a municipal permit?"
+      },
+      {
+        "task_id": 7,
+        "input": "أحتاج ترخيص بناء",
+        "expected": "permit",
+        "predicted": "greeting",
+        "passed": false,
+        "reply": "مرحبًا بك في رفيق. كيف يمكنني مساعدتك في التصاريح البلدية؟"
+      },
+      {
+        "task_id": 8,
+        "input": "ما شروط البناء؟",
+        "expected": "permit",
+        "predicted": "greeting",
+        "passed": false,
+        "reply": "مرحبًا بك في رفيق. كيف يمكنني مساعدتك في التصاريح البلدية؟"
+      },
+      {
+        "task_id": 11,
+        "input": "Track my application",
+        "expected": "status",
+        "predicted": "greeting",
+        "passed": false,
+        "reply": "Welcome to Rafeeq. How can I help with a municipal permit?"
+      },
+      {
+        "task_id": 12,
+        "input": "Where is my request?",
+        "expected": "status",
+        "predicted": "greeting",
+        "passed": false,
+        "reply": "Welcome to Rafeeq. How can I help with a municipal permit?"
+      },
+      {
+        "task_id": 13,
+        "input": "Application progress update",
+        "expected": "status",
+        "predicted": "greeting",
+        "passed": false,
+        "reply": "Welcome to Rafeeq. How can I help with a municipal permit?"
+      },
+      {
+        "task_id": 15,
+        "input": "وين وصل طلبي؟",
+        "expected": "status",
+        "predicted": "greeting",
+        "passed": false,
+        "reply": "مرحبًا بك في رفيق. كيف يمكنني مساعدتك في التصاريح البلدية؟"
+      },
+      {
+        "task_id": 16,
+        "input": "أريد تتبع المعاملة",
+        "expected": "status",
+        "predicted": "greeting",
+        "passed": false,
+        "reply": "مرحبًا بك في رفيق. كيف يمكنني مساعدتك في التصاريح البلدية؟"
+      }
+    ]
+  },
+  "B_improved": {
+    "total": 21,
+    "passed": 21,
+    "failed": 0,
+    "accuracy_percent": 100.0,
+    "errors": []
+  },
+  "results": {
+    "A_baseline": [
+      {
+        "task_id": 1,
+        "input": "I need a permit",
+        "expected": "permit",
+        "predicted": "permit",
+        "passed": true,
+        "reply": "I can explain demo permit requirements or help prepare an application."
+      },
+      {
+        "task_id": 2,
+        "input": "construction permit requirements",
+        "expected": "permit",
+        "predicted": "permit",
+        "passed": true,
+        "reply": "I can explain demo permit requirements or help prepare an application."
+      },
+      {
+        "task_id": 3,
+        "input": "I need a license",
+        "expected": "permit",
+        "predicted": "greeting",
+        "passed": false,
+        "reply": "Welcome to Rafeeq. How can I help with a municipal permit?"
+      },
+      {
+        "task_id": 4,
+        "input": "How do I get building authorization?",
+        "expected": "permit",
+        "predicted": "greeting",
+        "passed": false,
+        "reply": "Welcome to Rafeeq. How can I help with a municipal permit?"
+      },
+      {
+        "task_id": 5,
+        "input": "أحتاج تصريحًا",
+        "expected": "permit",
+        "predicted": "permit",
+        "passed": true,
+        "reply": "يمكنني شرح متطلبات التصريح التجريبية أو مساعدتك في تجهيز طلب."
+      },
+      {
+        "task_id": 6,
+        "input": "أريد رخصة بناء",
+        "expected": "permit",
+        "predicted": "permit",
+        "passed": true,
+        "reply": "يمكنني شرح متطلبات التصريح التجريبية أو مساعدتك في تجهيز طلب."
+      },
+      {
+        "task_id": 7,
+        "input": "أحتاج ترخيص بناء",
+        "expected": "permit",
+        "predicted": "greeting",
+        "passed": false,
+        "reply": "مرحبًا بك في رفيق. كيف يمكنني مساعدتك في التصاريح البلدية؟"
+      },
+      {
+        "task_id": 8,
+        "input": "ما شروط البناء؟",
+        "expected": "permit",
+        "predicted": "greeting",
+        "passed": false,
+        "reply": "مرحبًا بك في رفيق. كيف يمكنني مساعدتك في التصاريح البلدية؟"
+      },
+      {
+        "task_id": 9,
+        "input": "Check my status",
+        "expected": "status",
+        "predicted": "status",
+        "passed": true,
+        "reply": "Please provide an application ID to check demo status."
+      },
+      {
+        "task_id": 10,
+        "input": "What is the status of my application?",
+        "expected": "status",
+        "predicted": "status",
+        "passed": true,
+        "reply": "Please provide an application ID to check demo status."
+      },
+      {
+        "task_id": 11,
+        "input": "Track my application",
+        "expected": "status",
+        "predicted": "greeting",
+        "passed": false,
+        "reply": "Welcome to Rafeeq. How can I help with a municipal permit?"
+      },
+      {
+        "task_id": 12,
+        "input": "Where is my request?",
+        "expected": "status",
+        "predicted": "greeting",
+        "passed": false,
+        "reply": "Welcome to Rafeeq. How can I help with a municipal permit?"
+      },
+      {
+        "task_id": 13,
+        "input": "Application progress update",
+        "expected": "status",
+        "predicted": "greeting",
+        "passed": false,
+        "reply": "Welcome to Rafeeq. How can I help with a municipal permit?"
+      },
+      {
+        "task_id": 14,
+        "input": "متابعة الطلب",
+        "expected": "status",
+        "predicted": "status",
+        "passed": true,
+        "reply": "يرجى إدخال رقم الطلب للتحقق من الحالة التجريبية."
+      },
+      {
+        "task_id": 15,
+        "input": "وين وصل طلبي؟",
+        "expected": "status",
+        "predicted": "greeting",
+        "passed": false,
+        "reply": "مرحبًا بك في رفيق. كيف يمكنني مساعدتك في التصاريح البلدية؟"
+      },
+      {
+        "task_id": 16,
+        "input": "أريد تتبع المعاملة",
+        "expected": "status",
+        "predicted": "greeting",
+        "passed": false,
+        "reply": "مرحبًا بك في رفيق. كيف يمكنني مساعدتك في التصاريح البلدية؟"
+      },
+      {
+        "task_id": 17,
+        "input": "حالة طلبي",
+        "expected": "status",
+        "predicted": "status",
+        "passed": true,
+        "reply": "يرجى إدخال رقم الطلب للتحقق من الحالة التجريبية."
+      },
+      {
+        "task_id": 18,
+        "input": "Hello",
+        "expected": "greeting",
+        "predicted": "greeting",
+        "passed": true,
+        "reply": "Welcome to Rafeeq. How can I help with a municipal permit?"
+      },
+      {
+        "task_id": 19,
+        "input": "Good morning",
+        "expected": "greeting",
+        "predicted": "greeting",
+        "passed": true,
+        "reply": "Welcome to Rafeeq. How can I help with a municipal permit?"
+      },
+      {
+        "task_id": 20,
+        "input": "السلام عليكم",
+        "expected": "greeting",
+        "predicted": "greeting",
+        "passed": true,
+        "reply": "مرحبًا بك في رفيق. كيف يمكنني مساعدتك في التصاريح البلدية؟"
+      },
+      {
+        "task_id": 21,
+        "input": "مرحبا",
+        "expected": "greeting",
+        "predicted": "greeting",
+        "passed": true,
+        "reply": "مرحبًا بك في رفيق. كيف يمكنني مساعدتك في التصاريح البلدية؟"
+      }
+    ],
+    "B_improved": [
+      {
+        "task_id": 1,
+        "input": "I need a permit",
+        "expected": "permit",
+        "predicted": "permit",
+        "passed": true,
+        "reply": "I can explain demo permit requirements or help prepare an application."
+      },
+      {
+        "task_id": 2,
+        "input": "construction permit requirements",
+        "expected": "permit",
+        "predicted": "permit",
+        "passed": true,
+        "reply": "I can explain demo permit requirements or help prepare an application."
+      },
+      {
+        "task_id": 3,
+        "input": "I need a license",
+        "expected": "permit",
+        "predicted": "permit",
+        "passed": true,
+        "reply": "I can explain demo permit requirements or help prepare an application."
+      },
+      {
+        "task_id": 4,
+        "input": "How do I get building authorization?",
+        "expected": "permit",
+        "predicted": "permit",
+        "passed": true,
+        "reply": "I can explain demo permit requirements or help prepare an application."
+      },
+      {
+        "task_id": 5,
+        "input": "أحتاج تصريحًا",
+        "expected": "permit",
+        "predicted": "permit",
+        "passed": true,
+        "reply": "يمكنني شرح متطلبات التصريح التجريبية أو مساعدتك في تجهيز طلب."
+      },
+      {
+        "task_id": 6,
+        "input": "أريد رخصة بناء",
+        "expected": "permit",
+        "predicted": "permit",
+        "passed": true,
+        "reply": "يمكنني شرح متطلبات التصريح التجريبية أو مساعدتك في تجهيز طلب."
+      },
+      {
+        "task_id": 7,
+        "input": "أحتاج ترخيص بناء",
+        "expected": "permit",
+        "predicted": "permit",
+        "passed": true,
+        "reply": "يمكنني شرح متطلبات التصريح التجريبية أو مساعدتك في تجهيز طلب."
+      },
+      {
+        "task_id": 8,
+        "input": "ما شروط البناء؟",
+        "expected": "permit",
+        "predicted": "permit",
+        "passed": true,
+        "reply": "يمكنني شرح متطلبات التصريح التجريبية أو مساعدتك في تجهيز طلب."
+      },
+      {
+        "task_id": 9,
+        "input": "Check my status",
+        "expected": "status",
+        "predicted": "status",
+        "passed": true,
+        "reply": "Please provide an application ID to check demo status."
+      },
+      {
+        "task_id": 10,
+        "input": "What is the status of my application?",
+        "expected": "status",
+        "predicted": "status",
+        "passed": true,
+        "reply": "Please provide an application ID to check demo status."
+      },
+      {
+        "task_id": 11,
+        "input": "Track my application",
+        "expected": "status",
+        "predicted": "status",
+        "passed": true,
+        "reply": "Please provide an application ID to check demo status."
+      },
+      {
+        "task_id": 12,
+        "input": "Where is my request?",
+        "expected": "status",
+        "predicted": "status",
+        "passed": true,
+        "reply": "Please provide an application ID to check demo status."
+      },
+      {
+        "task_id": 13,
+        "input": "Application progress update",
+        "expected": "status",
+        "predicted": "status",
+        "passed": true,
+        "reply": "Please provide an application ID to check demo status."
+      },
+      {
+        "task_id": 14,
+        "input": "متابعة الطلب",
+        "expected": "status",
+        "predicted": "status",
+        "passed": true,
+        "reply": "يرجى إدخال رقم الطلب للتحقق من الحالة التجريبية."
+      },
+      {
+        "task_id": 15,
+        "input": "وين وصل طلبي؟",
+        "expected": "status",
+        "predicted": "status",
+        "passed": true,
+        "reply": "يرجى إدخال رقم الطلب للتحقق من الحالة التجريبية."
+      },
+      {
+        "task_id": 16,
+        "input": "أريد تتبع المعاملة",
+        "expected": "status",
+        "predicted": "status",
+        "passed": true,
+        "reply": "يرجى إدخال رقم الطلب للتحقق من الحالة التجريبية."
+      },
+      {
+        "task_id": 17,
+        "input": "حالة طلبي",
+        "expected": "status",
+        "predicted": "status",
+        "passed": true,
+        "reply": "يرجى إدخال رقم الطلب للتحقق من الحالة التجريبية."
+      },
+      {
+        "task_id": 18,
+        "input": "Hello",
+        "expected": "greeting",
+        "predicted": "greeting",
+        "passed": true,
+        "reply": "Welcome to Rafeeq. How can I help with a municipal permit?"
+      },
+      {
+        "task_id": 19,
+        "input": "Good morning",
+        "expected": "greeting",
+        "predicted": "greeting",
+        "passed": true,
+        "reply": "Welcome to Rafeeq. How can I help with a municipal permit?"
+      },
+      {
+        "task_id": 20,
+        "input": "السلام عليكم",
+        "expected": "greeting",
+        "predicted": "greeting",
+        "passed": true,
+        "reply": "مرحبًا بك في رفيق. كيف يمكنني مساعدتك في التصاريح البلدية؟"
+      },
+      {
+        "task_id": 21,
+        "input": "مرحبا",
+        "expected": "greeting",
+        "predicted": "greeting",
+        "passed": true,
+        "reply": "مرحبًا بك في رفيق. كيف يمكنني مساعدتك في التصاريح البلدية؟"
+      }
+    ]
+  },
+  "accuracy_improvement_percentage_points": 42.86
+}
